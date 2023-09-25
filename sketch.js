@@ -8,7 +8,7 @@ function draw() {
  ellipse(60,90,16,16);
  strokeWeight(mouseY);
  circle(windowWidth / 2, windowHeight / 2, 300);
- circle(windowWidth / 1, windowHeight / 1, 400);
+ rect(windowWidth / 5, windowHeight / 5, 20);
  textSize(20);
  text(mouseX, 50, 50);
  text(int(mouseY), 50, 100);
