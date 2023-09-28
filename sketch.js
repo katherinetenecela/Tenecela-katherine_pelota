@@ -3,6 +3,7 @@ let posY;
 let diametro;
 let radio;
 let fondo;
+let
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -10,7 +11,7 @@ function setup() {
   posY = windowHeight / 2;
   diametro = 30;
   radio = diametro / 2;
-  fondo = color(25, 100, 50);
+  fondo = color(255, 200, 50);
 
   // print (posX);
   // posX = 234
