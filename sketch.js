@@ -1,45 +1,33 @@
 let posX;
 let posY;
-let diametro;
-let radio;
-let fondo;
-let
+let diametro = 100;
+let radio = diametro / 2;
+let colorDeFondo;
+let vel = 10;
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   posX = windowWidth / 2;
   posY = windowHeight / 2;
-  diametro = 30;
-  radio = diametro / 2;
-  fondo = color(255, 200, 50);
-
-  // print (posX);
-  // posX = 234
-  // print (posX);
-  // posX = posX + 25;
-  // print (posX);
-  // posX = posX * 2;
-  // print (posX);
-  // posX = posX / 5;
-  // print (posX);
-  // posX *= 8;
-  // print (posX);
-  // posX += 1;
-  // print (posX);
-  // frameRate(4)
+  // frameRate(10);
+  colorDeFondo = color(255, 182, 193);
 }
 
 function draw() {
-  background(fondo);
-  posX -= 10;
+  background(colorDeFondo);
+  posX -= vel;
+
   if (posX < -radio) {
-    diametro = random(10, 100);
-    radio + diametro / 2;
-    fondo = color(255, random(100, 225), 50);
+    diametro = random(20, 200);
+    radio = diametro / 2;
+
+    colorDeFondo = color(200, random(10, 255), 40);
+    // colorDeFondo.saturation(0.7);
     posX = windowWidth + radio;
   }
-  fill(0);
-
+  fill(190);
+  strokeWeight(10);
+  stroke(0, 200, 255);
   circle(posX, posY, diametro);
 
   print(posX);
